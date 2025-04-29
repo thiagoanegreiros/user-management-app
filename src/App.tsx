@@ -1,32 +1,32 @@
-// src/App.tsx
-import React, { useEffect, useState } from 'react';
-import LoginPage from './components/LoginPage';
+import React from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import LoginPage from './components/LoginPage/LoginPage';
+import AuthCallbackPage from './components/AuthCallbackPage/AuthCallbackPage';
+import { useAuth } from './hooks/useAuth';
 
-function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem('access_token');
-    setIsLoggedIn(!!token);
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem('access_token');
-    setIsLoggedIn(false);
-  };
+const App: React.FC = () => {
+  const { isLoggedIn, logout } = useAuth();
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      {isLoggedIn ? (
-        <>
-          <h1>Welcome, you are logged in!</h1>
-          <button onClick={handleLogout}>Logout</button>
-        </>
-      ) : (
-        <LoginPage />
-      )}
-    </div>
+    <BrowserRouter>
+      <div style={{ textAlign: 'center', marginTop: '50px' }}>
+        <Routes>
+          <Route path="/auth" element={<AuthCallbackPage />} />
+          <Route path="/" element={
+            isLoggedIn ? (
+              <>
+                <h1>Welcome, you are logged in!</h1>
+                <button onClick={logout}>Logout</button>
+              </>
+            ) : (
+              <Navigate to="/login" />
+            )
+          } />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
