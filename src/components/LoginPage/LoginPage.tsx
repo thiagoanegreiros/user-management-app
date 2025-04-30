@@ -1,10 +1,10 @@
 // src/components/LoginPage/LoginPage.tsx
 import React from 'react';
+import { getLoginRedirectUrl } from '../../utils/auth';
 
 const LoginPage: React.FC = () => {
   const handleLogin = () => {
-    const redirectUri = `${window.location.origin}/auth`;
-    window.location.href = `https://python-studies.onrender.com/login?redirect_uri=${encodeURIComponent(redirectUri)}`;
+    window.location.href = getLoginRedirectUrl()
   };
 
   return (
