@@ -8,24 +8,22 @@ const App: React.FC = () => {
   const { isLoggedIn, logout } = useAuth();
 
   return (
-    <BrowserRouter>
-      <div style={{ textAlign: 'center', marginTop: '50px' }}>
-        <Routes>
-          <Route path="/auth" element={<AuthCallbackPage />} />
-          <Route path="/" element={
-            isLoggedIn ? (
-              <>
-                <h1>Welcome, you are logged in!</h1>
-                <button onClick={logout}>Logout</button>
-              </>
-            ) : (
-              <Navigate to="/login" />
-            )
-          } />
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <Routes>
+        <Route path="/auth" element={<AuthCallbackPage />} />
+        <Route path="/" element={
+          isLoggedIn ? (
+            <>
+              <h1>Welcome, you are logged in!</h1>
+              <button onClick={logout}>Logout</button>
+            </>
+          ) : (
+            <Navigate to="/login" />
+          )
+        } />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </div>
   );
 };
 
