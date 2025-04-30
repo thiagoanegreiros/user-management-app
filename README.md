@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# ⚛️ React Frontend for FastAPI Hexagonal App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **React frontend** built with **Create React App (CRA)** and **TypeScript**, designed to work with the backend API:
 
-## Available Scripts
+- **REST API**: [https://python-studies.onrender.com/docs](https://python-studies.onrender.com/docs)
+- **GraphQL API**: [https://python-studies.onrender.com/graphql](https://python-studies.onrender.com/graphql)
 
-In the project directory, you can run:
+It serves as the user interface for the [FastAPI Hexagonal Project](https://github.com/thiagoanegreiros/fastapi-project), implementing authentication, data visualization, and API interaction.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- ✅ React 18 + TypeScript  
+- ✅ Integration with REST and GraphQL APIs  
+- ✅ Authentication flow (OAuth2, JWT-ready)  
+- ✅ Routing with `react-router`  
+- ✅ Unit tests with Jest and React Testing Library  
+- ✅ Code coverage reports  
+- ✅ Clean component and hook-based architecture  
+- ✅ Future CI/CD integration  
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧪 Running Tests with Coverage
 
-### `npm run build`
+To execute all tests and generate a coverage report:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm test -- --coverage --watchAll=false
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✅ Next Steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🌐 Use GraphQL for advanced data fetching  
+- 🧪 Increase unit test coverage to 100%  
+- 🚀 Add GitHub Actions for CI and deployments  
+- 🔐 Add authentication guards to routes  
+- 🧱 Improve component reusability and modularity  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📌 Authentication Flow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- After OAuth login, the backend redirects to `/auth?token=...`  
+- The React app stores the token in `localStorage`  
+- Authenticated requests can then be made to protected backend endpoints  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🧠 Purpose
 
-## Learn More
+This project aims to demonstrate:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Full integration between frontend and a Python backend  
+- A clean and modern frontend codebase using best practices  
+- An extensible foundation for real-world applications  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## 🤝 Contributing
+
+Contributions and suggestions are welcome! This project is part of an ongoing learning journey and will continue to evolve.
+
+---
+
+## 👨‍💻 Author
+
+Made by **Thiago Ananias**
