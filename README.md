@@ -1,5 +1,13 @@
 # ⚛️ React Frontend for FastAPI Hexagonal App
 
+![CI](https://github.com/thiagoanegreiros/user-management-app/actions/workflows/ci.yml/badge.svg)
+![CodeQL](https://github.com/thiagoanegreiros/user-management-app/actions/workflows/codeql.yml/badge.svg)
+[![Codecov](https://codecov.io/gh/thiagoanegreiros/user-management-app/branch/main/graph/badge.svg)](https://codecov.io/gh/thiagoanegreiros/user-management-app)
+![React](https://img.shields.io/badge/react-19.x-blue)
+![TypeScript](https://img.shields.io/badge/typescript-4.x-blue)
+![License](https://img.shields.io/github/license/thiagoanegreiros/user-management-app.svg)
+![husky](https://img.shields.io/badge/husky-pre--commit%20hook-enabled.svg)
+
 This is a **React frontend** built with **Create React App (CRA)** and **TypeScript**, designed to work with the backend API:
 
 - **REST API**: [https://python-studies.onrender.com/docs](https://python-studies.onrender.com/docs)
@@ -11,7 +19,7 @@ It serves as the user interface for the [FastAPI Hexagonal Project](https://gith
 
 ## 🚀 Features
 
-- ✅ React 18 + TypeScript  
+- ✅ React 19 + TypeScript  
 - ✅ Integration with REST and GraphQL APIs  
 - ✅ Authentication flow (OAuth2, JWT-ready)  
 - ✅ Routing with `react-router`  
