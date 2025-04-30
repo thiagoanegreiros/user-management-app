@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router';
+import { Route, Routes, Navigate } from 'react-router';
 import LoginPage from './components/LoginPage/LoginPage';
 import AuthCallbackPage from './components/AuthCallbackPage/AuthCallbackPage';
 import { useAuth } from './hooks/useAuth';

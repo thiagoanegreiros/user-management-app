@@ -1,12 +1,11 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import App from './App';
+import { useAuth } from './hooks/useAuth';
 
 jest.mock('./hooks/useAuth', () => ({
   useAuth: jest.fn(),
 }));
-
-import { useAuth } from './hooks/useAuth';
 
 describe('App', () => {
   afterEach(() => {
