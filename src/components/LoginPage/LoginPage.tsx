@@ -3,7 +3,6 @@ import React from 'react';
 
 const LoginPage: React.FC = () => {
   const handleLogin = () => {
-    // Coloque a URL da sua API que inicia o fluxo de OAuth2
     window.location.href = 'https://python-studies.onrender.com/login';
   };
 
