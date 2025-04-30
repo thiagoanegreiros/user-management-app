@@ -3,7 +3,8 @@ import React from 'react';
 
 const LoginPage: React.FC = () => {
   const handleLogin = () => {
-    window.location.href = 'https://python-studies.onrender.com/login';
+    const redirectUri = `${window.location.origin}/auth`;
+    window.location.href = `https://python-studies.onrender.com/login?redirect_uri=${encodeURIComponent(redirectUri)}`;
   };
 
   return (
