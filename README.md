@@ -6,7 +6,6 @@ This is a **React frontend** built with **Create React App (CRA)** and **TypeScr
 - **GraphQL API**: [https://python-studies.onrender.com/graphql](https://python-studies.onrender.com/graphql)
 
 It serves as the user interface for the [FastAPI Hexagonal Project](https://github.com/thiagoanegreiros/fastapi-project), implementing authentication, data visualization, and API interaction.
-
 ---
 
 ## 🚀 Features
