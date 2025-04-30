@@ -8,7 +8,7 @@
 ![License](https://img.shields.io/github/license/thiagoanegreiros/user-management-app.svg)
 ![husky](https://img.shields.io/badge/husky-pre--commit%20hook-enabled.svg)
 
-This is a **React frontend** built with **Create React App (CRA)** and **TypeScript**, designed to work with the backend API:
+This is a **React frontend** hosted on https://user-management-app-hwjb.onrender.com/ built with **Create React App (CRA)** and **TypeScript**, designed to work with the backend API:
 
 - **REST API**: [https://python-studies.onrender.com/docs](https://python-studies.onrender.com/docs)
 - **GraphQL API**: [https://python-studies.onrender.com/graphql](https://python-studies.onrender.com/graphql)
