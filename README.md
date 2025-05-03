@@ -15,7 +15,7 @@ This is a **React frontend** hosted on https://user-management-app-hwjb.onrender
 
 It serves as the user interface for the [FastAPI Hexagonal Project](https://github.com/thiagoanegreiros/fastapi-project), implementing authentication, data visualization, and API interaction.
 
----
+----
 
 ## 🚀 Features
 
