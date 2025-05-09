@@ -6,4 +6,9 @@ import '@testing-library/jest-dom';
 // test/setupFiles.js
 import { TextEncoder } from 'text-encoding';
 
+import '@testing-library/jest-dom';
+import fetchMock from 'jest-fetch-mock';
+
+fetchMock.enableMocks();
+
 global.TextEncoder = TextEncoder;
