@@ -2,13 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug React App (Chrome)",
-      "type": "pwa-chrome",
-      "request": "launch",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}/src"
-    },
-    {
       "type": "pwa-node",
       "request": "launch",
       "name": "npm test",
@@ -21,6 +14,25 @@
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
-    }
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Lint Fix",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "lint-fix"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Debug React App (Chrome)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src"
+    },
   ]
 }

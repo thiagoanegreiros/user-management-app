@@ -2,11 +2,11 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import ProtectedRoute from './ProtectedRoute';
 
+import { useAuth } from '../../hooks/useAuth';
+
 jest.mock('../../hooks/useAuth', () => ({
   useAuth: jest.fn()
 }));
-
-import { useAuth } from '../../hooks/useAuth';
 
 const DummyComponent = () => <div>Protected Content</div>;
 
