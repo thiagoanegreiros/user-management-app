@@ -19,14 +19,15 @@ It serves as the user interface for the [FastAPI Hexagonal Project](https://gith
 
 ## 🚀 Features
 
-- ✅ React 19 + TypeScript  
-- ✅ Integration with REST and GraphQL APIs  
-- ✅ Authentication flow (OAuth2, JWT-ready)  
-- ✅ Routing with `react-router`  
+- ✅ React 19 + TypeScript
+- ✅ Integration with REST and GraphQL APIs
+- ✅ Authentication flow (OAuth2, JWT-ready)
+- ✅ Routing with `react-router`
 - ✅ Unit tests with Jest and React Testing Library  
-- ✅ Code coverage reports  
-- ✅ Clean component and hook-based architecture  
-- ✅ Future CI/CD integration  
+- ✅ Code coverage reports
+- ✅ Clean component and hook-based architecture
+- ✅ GitHub CI integration and CodQL 
+- 🔐 Authentication guards to routes
 
 ---
 
@@ -37,14 +38,6 @@ To execute all tests and generate a coverage report:
 ```bash
 npm test -- --coverage --watchAll=false
 ```
-
-## ✅ Next Steps
-
-- 🌐 Use GraphQL for advanced data fetching  
-- 🧪 Increase unit test coverage to 100%  
-- 🚀 Add GitHub Actions for CI and deployments  
-- 🔐 Add authentication guards to routes  
-- 🧱 Improve component reusability and modularity  
 
 ---
 
