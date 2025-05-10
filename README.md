@@ -26,6 +26,7 @@ It serves as the user interface for the [FastAPI Hexagonal Project](https://gith
 - ✅ Unit tests with Jest and React Testing Library  
 - ✅ Code coverage reports
 - ✅ Clean component and hook-based architecture
+- ✅ Tailwind 3 styles
 - ✅ GitHub CI integration and CodQL 
 - 🔐 Authentication guards to routes
 

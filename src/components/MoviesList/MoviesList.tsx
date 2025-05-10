@@ -23,13 +23,15 @@ const MoviesList: React.FC = () => {
       });
   }, []);
 
-  if (loading) return <p>Loading movies...</p>;
+  if (loading) return <p className="text-center mt-10 text-gray-500">Loading movies...</p>;
 
   return (
-    <div>
-      {movies && movies.length > 0 && movies.map(movie => (
-        <MovieItem key={movie.id} movie={movie} />
-      ))}
+    <div className="mt-10">
+      {movies.length > 0 ? (
+        movies.map(movie => <MovieItem key={movie.id} movie={movie} />)
+      ) : (
+        <p className="text-center text-gray-500">No movies found.</p>
+      )}
     </div>
   );
 };

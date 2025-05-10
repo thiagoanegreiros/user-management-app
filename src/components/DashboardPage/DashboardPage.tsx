@@ -11,14 +11,15 @@ const LoginPage: React.FC = () => {
     navigate('/')
   }
   return (
-    <div style={{ textAlign: 'center', marginTop: '100px' }}>
-      <h1>User Management App</h1>
-      <p>This is the dashboard</p>
-      <h1>Welcome, you are logged in!</h1>
-      <button onClick={dashLogout}>Logout</button>
-      <MoviesList />
-    </div>
-  );
+    <div className="min-h-screen bg-gradient-to-b from-slate-100 via-white to-slate-200">
+      <div className="text-center text-gray-700">
+        <h1 className="text-4xl font-bold">User Management App</h1>
+        <p className="text-lg">Welcome, you are logged in!</p>
+        <button className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700" onClick={dashLogout}>Logout</button>
+        <MoviesList />
+        </div>
+      </div>
+    );
 };
 
 export default LoginPage;

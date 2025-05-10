@@ -7,7 +7,7 @@ import DashboardPage from './components/DashboardPage/DashboardPage';
 
 const App: React.FC = () => {
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <div>
       <Routes>
         <Route path="/auth" element={<AuthCallbackPage />} />
         <Route path="/login" element={<LoginPage />} />

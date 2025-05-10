@@ -7,16 +7,18 @@ interface Props {
 
 const MovieItem: React.FC<Props> = ({ movie }) => {
   return (
-    <div style={{ display: 'flex', marginBottom: '1.5rem', gap: '1rem' }}>
+    <div className="flex flex-col sm:flex-row items-center gap-4 mb-8 max-w-4xl mx-auto p-4 border-b border-gray-200">
       <img
         src={movie.poster_path}
         alt={movie.title}
-        style={{ width: '120px', height: '180px', objectFit: 'cover' }}
+        className="w-32 h-48 object-cover rounded shadow-md"
       />
-      <div>
-        <h3>{movie.title}</h3>
-        <p>{movie.overview}</p>
-        <small>Release Date: {movie.release_date}</small>
+      <div className="text-center sm:text-left">
+        <h3 className="text-xl font-semibold mb-1">{movie.title}</h3>
+        <p className="text-gray-700 text-sm mb-2">{movie.overview}</p>
+        <small className="text-gray-500 block">
+          Release Date: {movie.release_date}
+        </small>
       </div>
     </div>
   );
