@@ -29,8 +29,8 @@ describe('MoviesList', () => {
 
   it('should render movies after fetch', async () => {
     const movies: Movie[] = [
-      { id: 1, title: 'Inception', overview: '', poster_path: '', vote_average: 8.8 },
-      { id: 2, title: 'Interstellar', overview: '', poster_path: '', vote_average: 8.6 },
+      { id: 1, title: 'Inception', overview: '', poster_path: '', release_date: '2025' },
+      { id: 2, title: 'Interstellar', overview: '', poster_path: '', release_date: '2025' },
     ];
     fetchMock.mockResponseOnce(JSON.stringify(movies));
 

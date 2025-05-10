@@ -9,6 +9,7 @@
       "runtimeArgs": [
         "test",
         "--",
+        "--runInBand",
         "--coverage",
         "--watchAll=false"
       ],
