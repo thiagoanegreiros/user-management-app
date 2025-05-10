@@ -7,7 +7,7 @@ const MoviesList: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/movies/popular', {
+    fetch(`${process.env.REACT_APP_API_URL}/movies/popular`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('access_token')}`
       }
