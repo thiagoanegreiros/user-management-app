@@ -8,9 +8,10 @@ beforeEach(() => {
 
 test('should save token and redirect to home', async () => {
   const token = 'test-token';
+  const refresh_token = 'refresh_token';
 
   render(
-    <MemoryRouter initialEntries={[`/auth?token=${token}`]}>
+    <MemoryRouter initialEntries={[`/auth?token=${token}&refresh_token=${refresh_token}`]}>
       <Routes>
         <Route path="/auth" element={<AuthCallbackPage />} />
         <Route path="/" element={<h1>Home Page</h1>} />
@@ -20,6 +21,10 @@ test('should save token and redirect to home', async () => {
 
   await waitFor(() => {
     expect(localStorage.getItem('access_token')).toBe(token);
+  });
+
+  await waitFor(() => {
+    expect(localStorage.getItem('refresh_token')).toBe(refresh_token);
   });
 });
 

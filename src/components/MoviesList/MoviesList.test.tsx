@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import MoviesList from './MoviesList';
 import fetchMock from 'jest-fetch-mock';
-import { Movie } from './types';
+import { Movie } from '../../types';
 
 jest.mock('./MovieItem', () => ({ movie }: { movie: Movie }) => (
   <div data-testid="movie-item">{movie.title}</div>
@@ -22,7 +22,7 @@ describe('MoviesList', () => {
   });
 
   it('should show loading state initially', () => {
-    fetchMock.mockResponseOnce(() => new Promise(() => {})); // never resolves
+    fetchMock.mockResponseOnce(() => new Promise(() => {}));
     render(<MoviesList />);
     expect(screen.getByText(/loading movies/i)).toBeInTheDocument();
   });
@@ -52,7 +52,5 @@ describe('MoviesList', () => {
     await waitFor(() => {
       expect(screen.queryByText(/loading movies/i)).not.toBeInTheDocument();
     });
-
-    // Não há erro visível para o usuário, mas você pode verificar console.error via spy, se quiser
   });
 });

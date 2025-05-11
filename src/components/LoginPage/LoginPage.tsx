@@ -1,4 +1,3 @@
-// src/components/LoginPage/LoginPage.tsx
 import React from 'react';
 import { getLoginRedirectUrl } from '../../utils/auth';
 

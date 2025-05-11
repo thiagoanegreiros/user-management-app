@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { Movie } from './types';
+import { Movie } from '../../types';
 import MovieItem from './MovieItem';
+import { getPopularMovies } from '../../api/moviesApi';
 
 const MoviesList: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/movies/popular`, {
-      headers: {
-        'Authorization': `Bearer ${localStorage.getItem('access_token')}`
-      }
-    })
-      .then(res => res.json())
+    getPopularMovies()
       .then(data => {
         setMovies(data);
         setLoading(false);
-      })
-      .catch(err => {
-        console.error('Failed to fetch movies', err);
-        setLoading(false);
-      });
+    })
+    .catch(err => {
+      console.error('Failed to fetch movies', err);
+      setLoading(false);
+    });
   }, []);
 
   if (loading) return <p className="text-center mt-10 text-gray-500">Loading movies...</p>;

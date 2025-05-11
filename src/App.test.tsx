@@ -62,7 +62,6 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    // Espera até o texto "welcome" estar no DOM
     const welcomeText = await screen.findByText(/welcome, you are logged in/i);
     expect(welcomeText).toBeInTheDocument();
 

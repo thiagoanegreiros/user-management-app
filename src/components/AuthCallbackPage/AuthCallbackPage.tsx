@@ -7,9 +7,12 @@ const AuthCallbackPage: React.FC = () => {
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
-    const token = urlParams.get('token');
-    if (token) {
-      localStorage.setItem('access_token', token);
+    const accessToken = urlParams.get('token');
+    const refreshToken = urlParams.get('refresh_token');
+
+    if (accessToken && refreshToken) {
+      localStorage.setItem('access_token', accessToken);
+      localStorage.setItem('refresh_token', refreshToken);
       navigate('/');
     } else {
       navigate('/login');
