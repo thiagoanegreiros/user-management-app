@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router';
+import { useAuth } from '../../hooks/useAuth'
 
 const AuthCallbackPage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { login } = useAuth()
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -11,13 +13,12 @@ const AuthCallbackPage: React.FC = () => {
     const refreshToken = urlParams.get('refresh_token');
 
     if (accessToken && refreshToken) {
-      localStorage.setItem('access_token', accessToken);
-      localStorage.setItem('refresh_token', refreshToken);
+      login(accessToken, refreshToken);
       navigate('/');
     } else {
       navigate('/login');
     }
-  }, [navigate, location.search]);
+  }, [navigate, location.search, login]);
 
   return (
     <div style={{ textAlign: 'center', marginTop: '100px' }}>

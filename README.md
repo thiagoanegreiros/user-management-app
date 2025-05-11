@@ -22,6 +22,7 @@ It serves as the user interface for the [FastAPI Hexagonal Project](https://gith
 - ✅ React 19 + TypeScript
 - ✅ Integration with REST and GraphQL APIs
 - ✅ Authentication flow (OAuth2, JWT-ready)
+- ✅ Refresh Token logic
 - ✅ Routing with `react-router`
 - ✅ Unit tests with Jest and React Testing Library  
 - ✅ Code coverage reports

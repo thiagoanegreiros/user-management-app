@@ -21,7 +21,7 @@ describe('useAuth', () => {
     const { result } = renderHook(() => useAuth());
 
     act(() => {
-      result.current.login('new-token');
+      result.current.login('new-token', 'refresh-token');
     });
 
     expect(localStorage.getItem('access_token')).toBe('new-token');
