@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useNavigate } from 'react-router';
 import MoviesList from '../MoviesList/MoviesList';
+import { UsersPage } from '../UsersPage/UsersPage';
 
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -27,8 +28,10 @@ const LoginPage: React.FC = () => {
             Logout
           </button>
         </div>
-
         <div>
+          <UsersPage></UsersPage>
+        </div>
+        <div className="mt-10">
           <h2 className="text-xl font-semibold text-gray-700 mb-4">Popular Movies</h2>
           <MoviesList />
         </div>

@@ -1,13 +1,12 @@
 export const apiClient = async <T>(endpoint: string, options: RequestInit = {}): Promise<T> => {
   const token = localStorage.getItem('access_token');
-
   const res = await fetch(`${process.env.REACT_APP_API_URL}${endpoint}`, {
     ...options,
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`,
       ...options.headers,
-    },
+    }
   });
 
   if (res.status === 401) {
