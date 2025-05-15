@@ -3,6 +3,8 @@ import { MemoryRouter } from 'react-router';
 import App from './App';
 import { useAuth } from './hooks/useAuth';
 import fetchMock from 'jest-fetch-mock';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 jest.mock('./hooks/useAuth', () => ({
   useAuth: jest.fn(),
@@ -29,7 +31,9 @@ describe('App', () => {
 
     render(
       <MemoryRouter initialEntries={['/']}>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </MemoryRouter>
     );
 
@@ -58,7 +62,9 @@ describe('App', () => {
 
     render(
       <MemoryRouter initialEntries={['/']}>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </MemoryRouter>
     );
 
