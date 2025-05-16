@@ -30,6 +30,10 @@ It serves as the user interface for the [FastAPI Hexagonal Project](https://gith
 - ✅ Tailwind 3 styles
 - ✅ GitHub CI integration and CodQL 
 - 🔐 Authentication guards to routes
+- ✅ Theme support (dark/light mode)
+- ✅ Prettier + ESLint configured
+- ✅ Reusable custom hooks (useAuth)
+- ✅ State management with Redux
 
 ---
 
